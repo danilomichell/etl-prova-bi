@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "etl-prova-bi", "etl-prova-bi\etl-prova-bi.dtproj", "{890F35B9-7BF6-4D94-8C70-DF0F0149B14D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{890F35B9-7BF6-4D94-8C70-DF0F0149B14D}.Development|Default.ActiveCfg = Development
+		{890F35B9-7BF6-4D94-8C70-DF0F0149B14D}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D473E75-D117-405E-B4FF-64EE92FFC9BB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Dimensional"
+  DTS:DTSID="{4AAEF92F-0B9E-45CF-8CED-C42C4843D487}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=mssql-79793-0.cloudclusters.net, 12018;User ID=projetobi;Initial Catalog=AlunoDw;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{4AAEF92F-0B9E-45CF-8CED-C42C4843D487}mssql-79793-0.cloudclusters.net, 12018.AlunoDw.projetobi;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQXGRFNx+a0eUUpAIlpng6QAAAAACAAAAAAAQZgAAAAEAACAAAAA3/dNAJ3cXL339WjuELbKuLH6cyNLIr6fqB7S49HQj+QAAAAAOgAAAAAIAACAAAAB12anUP1fuC4WYAbvyK+OgxWB+pbifExyBePKKUFeeiIAAAAAb1SSJ4xi2CKiRx9EBM6Cp8wlU+9BAcoNzXx7eZyY1LhGtkhVdV4gUX4+nWN1ZiQiUuHCkgJdiI5nqw8IV1Muxj6xHxtvwF5dIiSC3fBhAzD0dFLTnBOPyWtrjq2Q3wd5v1830pSgPbEQlhLK/SluU1VtX04NTsN3zZJICZzQqJUAAAADogs1If1HhanNcYDl8SJVCkEP1k2iO1LMek5i4yfujk6wpJbx/LDtuqTN1Xo0bQSu+qkOILMe9kavU6bzWy24F</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
