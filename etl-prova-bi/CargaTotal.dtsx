@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="69"
-  DTS:VersionGUID="{8F5FFF73-B3C6-4B2A-8A21-24B7B02D02F6}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{11B798DB-DDB6-404E-A64C-87EFAB5E3501}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC3vT5+9nRpoM0wdAV5apnZAAAAAASAAACgAAAAEAAAAMZ+1Zoql/Go6JN1F2pPHWcgAAAAkAmpYM2g+sX7rSNTN72P2EVx5WG33sgeVsfMgOAQl8MUAAAAhcSIcp6ytxYB6oysDdJs/dqtbtg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACytuMnHxnCSkJU1XbNkJt6AAAAAASAAACgAAAAEAAAAKtfjzRBpDr54Yd9P2ByYSkgAAAAkk3r2hKIDF3koIJYaUbuwnqmd3bc6JR4zpwGynKKxtsUAAAA6RtQROXgpM+vcBxu9vfZnk/OTEE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADzL+PbBhm5ZTxkMnNVjRqmAAAAAASAAACgAAAAEAAAAHjuCgEnsi96dOR1Bwt3ahIgAAAAdIh4VV/9qo9Z7g5Fm5bdaMH1teFIq/5rrrkPRUrbjGcUAAAAJBiLs/BAJEDZr8bNGFG11aZnM/s</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA8UVPZchf65k/yueIJoOmaAAAAAASAAACgAAAAEAAAADAHUNimDXn0SGSagECn2gQgAAAAtEx8amsF241VkAmZzGnnIeIyqyyzX/uhZTMoqcJGg8cUAAAAx6if2XGZQdRIS/McjycnRYYRsLQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -5960,39 +5960,39 @@ FROM            Alunos AS A INNER JOIN
               startId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
-              endId="Package\Carga Fatos\Unir Cotista.Inputs[Entrada Unir Tudo 1]"
+              endId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Não Cotista.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
-              endId="Package\Carga Fatos\Unir Tudo.Inputs[Unir Tudo Entrada 1]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Par.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
-              endId="Package\Carga Fatos\Unir Status.Inputs[Entrada Unir Tudo 1]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Aprovado.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
-              endId="Package\Carga Fatos\Unir Tudo.Inputs[Entrada Unir Tudo 1]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Impar.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
-              endId="Package\Carga Fatos\Unir Status.Inputs[Unir Tudo Entrada 1]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Reprovado.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
               endId="Package\Carga Fatos\Unir Cotista.Inputs[Unir Tudo Entrada 1]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga Fatos\Cotista.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
-              endId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
+              endId="Package\Carga Fatos\Unir Status.Inputs[Unir Tudo Entrada 1]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Reprovado.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
+              endId="Package\Carga Fatos\Unir Tudo.Inputs[Unir Tudo Entrada 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Criar Cod_Tempo Par.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
+              endId="Package\Carga Fatos\Unir Status.Inputs[Entrada Unir Tudo 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Aprovado.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
+              endId="Package\Carga Fatos\Unir Cotista.Inputs[Entrada Unir Tudo 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Não Cotista.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
+              endId="Package\Carga Fatos\Unir Tudo.Inputs[Entrada Unir Tudo 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Criar Cod_Tempo Impar.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Conversão de Dados]"
               endId="Package\Carga Fatos\Criar Cod_Tempo Correto.Inputs[Entrada de Coluna Derivada]"
@@ -6019,15 +6019,15 @@ FROM            Alunos AS A INNER JOIN
               name="Saída de Origem OLE DB"
               startId="Package\Carga Fatos\Alunos.Outputs[Saída de Origem OLE DB]" />
             <path
-              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 1]"
-              endId="Package\Carga Fatos\Se Aprovado.Inputs[Entrada de Divisão Condicional]"
-              name="Unir Tudo Saída 1"
-              startId="Package\Carga Fatos\Unir Cotista.Outputs[Unir Tudo Saída 1]" />
-            <path
               refId="Package\Carga Fatos.Paths[Unir Tudo Saída 11]"
               endId="Package\Carga Fatos\Converter dados alunos.Inputs[Entrada de Conversão de Dados]"
               name="Unir Tudo Saída 1"
               startId="Package\Carga Fatos\Unir Status.Outputs[Unir Tudo Saída 1]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 1]"
+              endId="Package\Carga Fatos\Se Aprovado.Inputs[Entrada de Divisão Condicional]"
+              name="Unir Tudo Saída 1"
+              startId="Package\Carga Fatos\Unir Cotista.Outputs[Unir Tudo Saída 1]" />
             <path
               refId="Package\Carga Fatos.Paths[Unir Tudo Saída 12]"
               endId="Package\Carga Fatos\Converter para String.Inputs[Entrada de Conversão de Dados]"
@@ -6216,7 +6216,7 @@ FROM            Alunos AS A INNER JOIN
     design-time-name="Package\Carga dimensão cursos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="158,42"
           Id="Package\Carga dimensão cursos\Origem OLE DB"
@@ -6244,12 +6244,27 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga dimensão cursos\Destino OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Carga dimensão cursos\Origem OLE DB">
     <Properties>
@@ -6262,7 +6277,7 @@ FROM            Alunos AS A INNER JOIN
     design-time-name="Package\Carga dimensão disciplinas">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="158,42"
           Id="Package\Carga dimensão disciplinas\Origem OLE DB"
@@ -6290,12 +6305,27 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga dimensão disciplinas\Destino OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Carga dimensão disciplinas\Origem OLE DB">
     <Properties>
@@ -6384,7 +6414,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6418,7 +6450,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6452,7 +6486,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6642,7 +6678,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6676,7 +6714,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6698,7 +6738,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6720,7 +6762,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6742,7 +6786,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6764,7 +6810,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6852,9 +6900,33 @@ FROM            Alunos AS A INNER JOIN
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Carga Fatos\Divisão Condicional"
-          TopLeft="90.5,209.5" />
+          Size="126,42"
+          Id="Package\Carga Fatos\Aprovado"
+          TopLeft="517.5,515.5" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Carga Fatos\Se Aprovado"
+          TopLeft="509.5,413.5" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Carga Fatos\Se Cotista"
+          TopLeft="330.5,107.5" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Carga Fatos\Converter para String"
+          TopLeft="107.5,617.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Carga Fatos\Ordenar Impar"
+          TopLeft="275.5,311.5" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Carga Fatos\Datas"
+          TopLeft="124.5,5.5" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Carga Fatos\Unir Status"
+          TopLeft="395,617.5" />
         <NodeLayout
           Size="133,42"
           Id="Package\Carga Fatos\Reprovado"
@@ -6864,85 +6936,65 @@ FROM            Alunos AS A INNER JOIN
           Id="Package\Carga Fatos\Ordenar anulos"
           TopLeft="384,821.5" />
         <NodeLayout
-          Size="136,42"
-          Id="Package\Carga Fatos\Não Cotista"
-          TopLeft="327.5,209.5" />
-        <NodeLayout
-          Size="133,42"
-          Id="Package\Carga Fatos\Unir Status"
-          TopLeft="395,617.5" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Carga Fatos\Ordenar tempo"
-          TopLeft="170,821.5" />
-        <NodeLayout
-          Size="206,42"
-          Id="Package\Carga Fatos\Criar Cod_Tempo Correto"
-          TopLeft="96.5000000000001,719.5" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Carga Fatos\Cotista"
-          TopLeft="524,209.5" />
-        <NodeLayout
           Size="139,42"
           Id="Package\Carga Fatos\Ordenar Par"
           TopLeft="76.0000000000001,311.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Carga Fatos\Não Cotista"
+          TopLeft="327.5,209.5" />
         <NodeLayout
           Size="189,42"
           Id="Package\Carga Fatos\Junção de Mesclagem"
           TopLeft="367,923.5" />
         <NodeLayout
-          Size="184,42"
-          Id="Package\Carga Fatos\Converter para String"
-          TopLeft="107.5,617.5" />
-        <NodeLayout
-          Size="126,42"
-          Id="Package\Carga Fatos\Aprovado"
-          TopLeft="517.5,515.5" />
-        <NodeLayout
-          Size="136,42"
-          Id="Package\Carga Fatos\Unir Cotista"
-          TopLeft="512.5,311.5" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Carga Fatos\Ordenar Impar"
-          TopLeft="275.5,311.5" />
+          Size="159,42"
+          Id="Package\Carga Fatos\Destino OLE DB"
+          TopLeft="763,959" />
         <NodeLayout
           Size="196,42"
           Id="Package\Carga Fatos\Converter dados alunos"
           TopLeft="363.5,719.5" />
         <NodeLayout
-          Size="108,42"
-          Id="Package\Carga Fatos\Datas"
-          TopLeft="124.5,5.5" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Carga Fatos\Se Cotista"
-          TopLeft="330.5,107.5" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Carga Fatos\Conversão de Dados"
-          TopLeft="87.5,107.5" />
-        <NodeLayout
           Size="197,42"
           Id="Package\Carga Fatos\Criar Cod_Tempo Impar"
           TopLeft="252,413.5" />
         <NodeLayout
-          Size="127,42"
-          Id="Package\Carga Fatos\Unir Tudo"
-          TopLeft="136,515.5" />
+          Size="206,42"
+          Id="Package\Carga Fatos\Criar Cod_Tempo Correto"
+          TopLeft="96.5000000000001,719.5" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Carga Fatos\Divisão Condicional"
+          TopLeft="90.5,209.5" />
         <NodeLayout
           Size="186,42"
           Id="Package\Carga Fatos\Criar Cod_Tempo Par"
           TopLeft="5.50000000000011,413.5" />
         <NodeLayout
+          Size="136,42"
+          Id="Package\Carga Fatos\Unir Cotista"
+          TopLeft="512.5,311.5" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Carga Fatos\Conversão de Dados"
+          TopLeft="87.5,107.5" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Carga Fatos\Unir Tudo"
+          TopLeft="136,515.5" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Carga Fatos\Ordenar tempo"
+          TopLeft="170,821.5" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Carga Fatos\Cotista"
+          TopLeft="524,209.5" />
+        <NodeLayout
           Size="113,42"
           Id="Package\Carga Fatos\Alunos"
           TopLeft="339,5.5" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Carga Fatos\Se Aprovado"
-          TopLeft="509.5,413.5" />
         <EdgeLayout
           Id="Package\Carga Fatos.Paths[Unir Tudo Saída 12]"
           TopLeft="199.5,557.5">
@@ -6984,9 +7036,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,18.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7008,9 +7058,29 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,18.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Origem OLE DB1]"
+          TopLeft="395.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7054,9 +7124,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,18.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7105,108 +7173,6 @@ FROM            Alunos AS A INNER JOIN
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
-          TopLeft="395.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="163.666666666667,60"
-              Start="0,0"
-              End="163.666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5813953488372" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5813953488372"
-                    Point2="0,35.5813953488372"
-                    Point3="4,35.5813953488372" />
-                  <mssgle:LineSegment
-                    End="159.666666666667,35.5813953488372" />
-                  <mssgle:CubicBezierSegment
-                    Point1="159.666666666667,35.5813953488372"
-                    Point2="163.666666666667,35.5813953488372"
-                    Point3="163.666666666667,39.5813953488372" />
-                  <mssgle:LineSegment
-                    End="163.666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
-          TopLeft="98.5000000000001,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="81.1666666666667,60"
-              Start="0,0"
-              End="81.1666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.552099533437" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.552099533437"
-                    Point2="0,35.552099533437"
-                    Point3="4,35.552099533437" />
-                  <mssgle:LineSegment
-                    End="77.1666666666667,35.552099533437" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77.1666666666667,35.552099533437"
-                    Point2="81.1666666666667,35.552099533437"
-                    Point3="81.1666666666667,39.552099533437" />
-                  <mssgle:LineSegment
-                    End="81.1666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
-          TopLeft="580.5,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-98.1666666666667,60"
-              Start="0,0"
-              End="-98.1666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5720653789004"
-                    Point2="0,35.5720653789004"
-                    Point3="-4,35.5720653789004" />
-                  <mssgle:LineSegment
-                    End="-94.1666666666667,35.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-94.1666666666667,35.5720653789004"
-                    Point2="-98.1666666666667,35.5720653789004"
-                    Point3="-98.1666666666667,39.5720653789004" />
-                  <mssgle:LineSegment
-                    End="-98.1666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
           TopLeft="199.5,761.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7240,31 +7206,31 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
-          TopLeft="350.5,455.5">
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
+          TopLeft="580.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-131.166666666667,60"
+              EndConnector="21.3333333333334,60"
               Start="0,0"
-              End="-131.166666666667,52.5">
+              End="21.3333333333334,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.552099533437" />
+                    End="0,31.5813953488372" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.552099533437"
-                    Point2="0,35.552099533437"
-                    Point3="-4,35.552099533437" />
+                    Point1="0,31.5813953488372"
+                    Point2="0,35.5813953488372"
+                    Point3="4,35.5813953488372" />
                   <mssgle:LineSegment
-                    End="-127.166666666667,35.552099533437" />
+                    End="17.3333333333334,35.5813953488372" />
                   <mssgle:CubicBezierSegment
-                    Point1="-127.166666666667,35.552099533437"
-                    Point2="-131.166666666667,35.552099533437"
-                    Point3="-131.166666666667,39.552099533437" />
+                    Point1="17.3333333333334,35.5813953488372"
+                    Point2="21.3333333333334,35.5813953488372"
+                    Point3="21.3333333333334,39.5813953488372" />
                   <mssgle:LineSegment
-                    End="-131.166666666667,52.5" />
+                    End="21.3333333333334,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7274,7 +7240,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
           TopLeft="390.5,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7308,14 +7274,116 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
-          TopLeft="580.5,251.5">
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
+          TopLeft="350.5,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="21.3333333333334,60"
+              EndConnector="-131.166666666667,60"
               Start="0,0"
-              End="21.3333333333334,52.5">
+              End="-131.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.552099533437" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.552099533437"
+                    Point2="0,35.552099533437"
+                    Point3="-4,35.552099533437" />
+                  <mssgle:LineSegment
+                    End="-127.166666666667,35.552099533437" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-127.166666666667,35.552099533437"
+                    Point2="-131.166666666667,35.552099533437"
+                    Point3="-131.166666666667,39.552099533437" />
+                  <mssgle:LineSegment
+                    End="-131.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
+          TopLeft="580.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-98.1666666666667,60"
+              Start="0,0"
+              End="-98.1666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5720653789004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5720653789004"
+                    Point2="0,35.5720653789004"
+                    Point3="-4,35.5720653789004" />
+                  <mssgle:LineSegment
+                    End="-94.1666666666667,35.5720653789004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.1666666666667,35.5720653789004"
+                    Point2="-98.1666666666667,35.5720653789004"
+                    Point3="-98.1666666666667,39.5720653789004" />
+                  <mssgle:LineSegment
+                    End="-98.1666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
+          TopLeft="98.5000000000001,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.1666666666667,60"
+              Start="0,0"
+              End="81.1666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.552099533437" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.552099533437"
+                    Point2="0,35.552099533437"
+                    Point3="4,35.552099533437" />
+                  <mssgle:LineSegment
+                    End="77.1666666666667,35.552099533437" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77.1666666666667,35.552099533437"
+                    Point2="81.1666666666667,35.552099533437"
+                    Point3="81.1666666666667,39.552099533437" />
+                  <mssgle:LineSegment
+                    End="81.1666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
+          TopLeft="395.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="163.666666666667,60"
+              Start="0,0"
+              End="163.666666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -7326,13 +7394,47 @@ FROM            Alunos AS A INNER JOIN
                     Point2="0,35.5813953488372"
                     Point3="4,35.5813953488372" />
                   <mssgle:LineSegment
-                    End="17.3333333333334,35.5813953488372" />
+                    End="159.666666666667,35.5813953488372" />
                   <mssgle:CubicBezierSegment
-                    Point1="17.3333333333334,35.5813953488372"
-                    Point2="21.3333333333334,35.5813953488372"
-                    Point3="21.3333333333334,39.5813953488372" />
+                    Point1="159.666666666667,35.5813953488372"
+                    Point2="163.666666666667,35.5813953488372"
+                    Point3="163.666666666667,39.5813953488372" />
                   <mssgle:LineSegment
-                    End="21.3333333333334,52.5" />
+                    End="163.666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída da Junção de Mesclagem]"
+          TopLeft="556,944.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="207,35.5"
+              Start="0,0"
+              End="199.5,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="99.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="99.5,0"
+                    Point2="103.5,0"
+                    Point3="103.5,4" />
+                  <mssgle:LineSegment
+                    End="103.5,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="103.5,31.5"
+                    Point2="103.5,35.5"
+                    Point3="107.5,35.5" />
+                  <mssgle:LineSegment
+                    End="199.5,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7402,6 +7504,42 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Nao_Cotista]"
+          TopLeft="375.166666666667,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.3333333333333,60"
+              Start="0,0"
+              End="20.3333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4376899696049" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4376899696049"
+                    Point2="0,24.4376899696049"
+                    Point3="4,24.4376899696049" />
+                  <mssgle:LineSegment
+                    End="16.3333333333333,24.4376899696049" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.3333333333333,24.4376899696049"
+                    Point2="20.3333333333333,24.4376899696049"
+                    Point3="20.3333333333333,28.4376899696049" />
+                  <mssgle:LineSegment
+                    End="20.3333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.6166927083334,29.4376899696049,53.56671875,10.8671875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Carga Fatos.Paths[Impar]"
           TopLeft="206.5,251.5">
           <EdgeLayout.Curve>
@@ -7438,6 +7576,42 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Cotista]"
+          TopLeft="415.833333333333,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="164.666666666667,60"
+              Start="0,0"
+              End="164.666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4376899696049" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4376899696049"
+                    Point2="0,24.4376899696049"
+                    Point3="4,24.4376899696049" />
+                  <mssgle:LineSegment
+                    End="160.666666666667,24.4376899696049" />
+                  <mssgle:CubicBezierSegment
+                    Point1="160.666666666667,24.4376899696049"
+                    Point2="164.666666666667,24.4376899696049"
+                    Point3="164.666666666667,28.4376899696049" />
+                  <mssgle:LineSegment
+                    End="164.666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="66.7474544270835,29.4376899696049,31.1717578125,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Carga Fatos.Paths[Classificar Saída3]"
           TopLeft="246.5,863.5">
           <EdgeLayout.Curve>
@@ -7468,9 +7642,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="84.4166666666665,40.697796432319,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7599,142 +7771,6 @@ FROM            Alunos AS A INNER JOIN
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Carga Fatos\Destino OLE DB"
-          TopLeft="763,959" />
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída da Junção de Mesclagem]"
-          TopLeft="556,944.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="207,35.5"
-              Start="0,0"
-              End="199.5,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="99.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="99.5,0"
-                    Point2="103.5,0"
-                    Point3="103.5,4" />
-                  <mssgle:LineSegment
-                    End="103.5,31.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="103.5,31.5"
-                    Point2="103.5,35.5"
-                    Point3="107.5,35.5" />
-                  <mssgle:LineSegment
-                    End="199.5,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="95.5,-22,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Nao_Cotista]"
-          TopLeft="375.166666666667,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.3333333333333,60"
-              Start="0,0"
-              End="20.3333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4376899696049" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4376899696049"
-                    Point2="0,24.4376899696049"
-                    Point3="4,24.4376899696049" />
-                  <mssgle:LineSegment
-                    End="16.3333333333333,24.4376899696049" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.3333333333333,24.4376899696049"
-                    Point2="20.3333333333333,24.4376899696049"
-                    Point3="20.3333333333333,28.4376899696049" />
-                  <mssgle:LineSegment
-                    End="20.3333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-16.6166927083333,29.4376899696049,53.56671875,10.8671875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Cotista]"
-          TopLeft="415.833333333333,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="164.666666666667,60"
-              Start="0,0"
-              End="164.666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4376899696049" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4376899696049"
-                    Point2="0,24.4376899696049"
-                    Point3="4,24.4376899696049" />
-                  <mssgle:LineSegment
-                    End="160.666666666667,24.4376899696049" />
-                  <mssgle:CubicBezierSegment
-                    Point1="160.666666666667,24.4376899696049"
-                    Point2="164.666666666667,24.4376899696049"
-                    Point3="164.666666666667,28.4376899696049" />
-                  <mssgle:LineSegment
-                    End="164.666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="66.7474544270833,29.4376899696049,31.1717578125,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Origem OLE DB1]"
-          TopLeft="395.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,18.25,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -7743,40 +7779,6 @@ FROM            Alunos AS A INNER JOIN
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga Fatos\Alunos">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga dimensão disciplinas\Destino OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga dimensão cursos\Destino OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7790,6 +7792,14 @@ FROM            Alunos AS A INNER JOIN
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fatos\Alunos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
