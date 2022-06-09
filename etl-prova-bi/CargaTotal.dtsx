@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{0FAC1664-956F-4BB9-B83B-B59FDC6418A9}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{C7A2F495-4A9E-4927-9BF4-8AAF3069A732}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABn4GYgGHV56OlUGLHNOPMwAAAAAASAAACgAAAAEAAAAJFSYqwEkX2iKhNEMdUZdP8gAAAAEKbF4R3Ezy5UTWjqevxrWPhrwE6HfnYCnyWATdEK8TEUAAAAYCfmqaMqKfWmdsDDiF+XOwN44iM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADoSpybky56lnErIco1HOIWAAAAAASAAACgAAAAEAAAAKlwg3upOXQiyB8NMiSCLJQgAAAAPWKSLRPoD03UFfHGx+8FqVDkA9E7FVDjRYJWY2Xbi/4UAAAAIaNFpjYkN6rFSlBvstcnZ8pTNuY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACrtpQJ4KQxW64jDQDAfTaIAAAAAASAAACgAAAAEAAAAO7r3+xc3RKyOS6tVeNM0bIgAAAAIV1gPRj3w19xhkW3l7iFI2Zf/nHL8Ue4V+ilp4Xqqt0UAAAAJw8nQmKmKmyxz/RHL2tIsGrShCk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADgjXfcLgqaVxDT+N88CeLNAAAAAASAAACgAAAAEAAAAPeJ+W+8X1qUEUpFbBLzJsogAAAAjf2eSDjSsr1QLgfrK7IbXpqX+Dyu6gPv7CKNFyLpKfEUAAAAlTismTHq2HXPH5uqGIO5ibeG67U</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,6 +57,7 @@
       DTS:refId="Package\Carga dimensão cursos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{6C3F981F-60D9-4962-A273-C7B4D2C8D7FE}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -379,6 +380,7 @@ JOIN DEPARTAMENTOS D ON D.COD_DPTO = C.COD_DPTO</property>
       DTS:refId="Package\Carga dimensão disciplinas"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{DAF08933-1630-40BA-923F-A7967DC586DC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -701,6 +703,7 @@ FROM DISCIPLINAS D</property>
       DTS:refId="Package\Carga dimensão tempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{DD96FE63-82FA-499C-8ACC-362D2F9EB72D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3257,10 +3260,10 @@ FROM            Alunos INNER JOIN
                   name="Entrada de Coluna Derivada">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Carga Fatos\Criar Cod_Tempo Impar.Inputs[Entrada de Coluna Derivada].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Criar Cod_Tempo Impar.Inputs[Entrada de Coluna Derivada].Columns[Semestre]"
                       cachedDataType="i4"
-                      cachedName="SEMESTRE"
-                      lineageId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[SEMESTRE]" />
+                      cachedName="Semestre"
+                      lineageId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Semestre]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Criar Cod_Tempo Impar.Inputs[Entrada de Coluna Derivada].Columns[Data_Entrada]"
                       cachedDataType="date"
@@ -3292,7 +3295,7 @@ FROM            Alunos INNER JOIN
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[DATEADD]("month",((#{Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[SEMESTRE]} - 1) * 6),#{Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Data_Entrada]})</property>
+                          name="Expression">[DATEADD]("month",((#{Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Semestre]} - 1) * 6),#{Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Data_Entrada]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -3336,7 +3339,7 @@ FROM            Alunos INNER JOIN
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[DATEADD]("month",((#{Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[SEMESTRE]} - 1) * 6),#{Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Data_Entrada]})</property>
+                          name="Expression">[DATEADD]("month",((#{Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Semestre]} - 1) * 6),#{Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Data_Entrada]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -3387,10 +3390,10 @@ FROM            Alunos INNER JOIN
                   name="Entrada de Coluna Derivada">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Carga Fatos\Criar Cod_Tempo Par.Inputs[Entrada de Coluna Derivada].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Criar Cod_Tempo Par.Inputs[Entrada de Coluna Derivada].Columns[Semestre]"
                       cachedDataType="i4"
-                      cachedName="SEMESTRE"
-                      lineageId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[SEMESTRE]" />
+                      cachedName="Semestre"
+                      lineageId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Semestre]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Criar Cod_Tempo Par.Inputs[Entrada de Coluna Derivada].Columns[Data_Entrada]"
                       cachedDataType="date"
@@ -3422,7 +3425,7 @@ FROM            Alunos INNER JOIN
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[DATEADD]("month",((#{Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[SEMESTRE]} - 1) * 6),#{Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Data_Entrada]})</property>
+                          name="Expression">[DATEADD]("month",((#{Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Semestre]} - 1) * 6),#{Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Data_Entrada]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -3466,7 +3469,7 @@ FROM            Alunos INNER JOIN
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[DATEADD]("month",((#{Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[SEMESTRE]} - 1) * 6),#{Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Data_Entrada]})</property>
+                          name="Expression">[DATEADD]("month",((#{Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Semestre]} - 1) * 6),#{Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Data_Entrada]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -3528,7 +3531,7 @@ FROM            Alunos INNER JOIN
                   dataType="System.String"
                   description="O comando SQL a ser executado."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT A.Mat_Alu, A.Dat_Entrada, M.SEMESTRE
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT A.Mat_Alu, A.Dat_Entrada, M.Semestre, M.Cod_Disc
 FROM            Alunos AS A INNER JOIN
                          Matricula AS M ON M.Mat_Alu = A.Mat_Alu</property>
                 <property
@@ -3586,13 +3589,22 @@ FROM            Alunos AS A INNER JOIN
                       name="Dat_Entrada"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].ExternalColumns[SEMESTRE]"
-                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]"
-                      name="SEMESTRE"
+                      externalMetadataColumnId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].ExternalColumns[Semestre]"
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]"
+                      name="Semestre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Cod_Disc]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].ExternalColumns[Cod_Disc]"
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Cod_Disc]"
+                      name="Cod_Disc"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -3607,9 +3619,13 @@ FROM            Alunos AS A INNER JOIN
                       length="10"
                       name="Dat_Entrada" />
                     <externalMetadataColumn
-                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].ExternalColumns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].ExternalColumns[Semestre]"
                       dataType="i4"
-                      name="SEMESTRE" />
+                      name="Semestre" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].ExternalColumns[Cod_Disc]"
+                      dataType="i8"
+                      name="Cod_Disc" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3629,10 +3645,15 @@ FROM            Alunos AS A INNER JOIN
                       lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Erro de Origem OLE DB].Columns[Dat_Entrada]"
                       name="Dat_Entrada" />
                     <outputColumn
-                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Erro de Origem OLE DB].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Erro de Origem OLE DB].Columns[Semestre]"
                       dataType="i4"
-                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Erro de Origem OLE DB].Columns[SEMESTRE]"
-                      name="SEMESTRE" />
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Erro de Origem OLE DB].Columns[Semestre]"
+                      name="Semestre" />
+                    <outputColumn
+                      refId="Package\Carga Fatos\Datas.Outputs[Saída de Erro de Origem OLE DB].Columns[Cod_Disc]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Erro de Origem OLE DB].Columns[Cod_Disc]"
+                      name="Cod_Disc" />
                     <outputColumn
                       refId="Package\Carga Fatos\Datas.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -3726,6 +3747,7 @@ FROM            Alunos AS A INNER JOIN
                       refId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Cod_Disc]"
                       cachedDataType="i8"
                       cachedName="Cod_Disc"
+                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Cod_Disc]"
                       lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Disc]" />
                     <inputColumn
@@ -3850,10 +3872,10 @@ FROM            Alunos AS A INNER JOIN
                   name="Entrada de Divisão Condicional">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Carga Fatos\Divisão Condicional.Inputs[Entrada de Divisão Condicional].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Divisão Condicional.Inputs[Entrada de Divisão Condicional].Columns[Semestre]"
                       cachedDataType="i4"
-                      cachedName="SEMESTRE"
-                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]" />
+                      cachedName="Semestre"
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3873,7 +3895,7 @@ FROM            Alunos AS A INNER JOIN
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
-                      name="Expression">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]} % 2 == 0</property>
+                      name="Expression">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]} % 2 == 0</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -3901,7 +3923,7 @@ FROM            Alunos AS A INNER JOIN
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
-                      name="Expression">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]} % 2 != 0</property>
+                      name="Expression">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]} % 2 != 0</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -3969,7 +3991,7 @@ FROM            Alunos AS A INNER JOIN
                 <property
                   dataType="System.Int32"
                   description="Especifica o número de colunas na chave de ordenação."
-                  name="NumKeyColumns">1</property>
+                  name="NumKeyColumns">2</property>
                 <property
                   dataType="System.Boolean"
                   description="Indica se os valores nulos serão tratados como valores iguais."
@@ -3996,6 +4018,12 @@ FROM            Alunos AS A INNER JOIN
                       cachedDataType="i8"
                       cachedName="Cod_Tempo_Inserir"
                       lineageId="Package\Carga Fatos\Ordenar tempo.Outputs[Classificar Saída].Columns[Cod_Tempo_Inserir]" />
+                    <inputColumn
+                      refId="Package\Carga Fatos\Junção de Mesclagem.Inputs[Entrada Esquerda da Junção de Mesclagem].Columns[Cod_Disc]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Disc"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Carga Fatos\Ordenar tempo.Outputs[Classificar Saída].Columns[Cod_Disc]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4014,6 +4042,7 @@ FROM            Alunos AS A INNER JOIN
                       refId="Package\Carga Fatos\Junção de Mesclagem.Inputs[Entrada Direita da Junção de Mesclagem].Columns[Cod_Disc]"
                       cachedDataType="i8"
                       cachedName="Cod_Disc"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\Carga Fatos\Ordenar anulos.Outputs[Classificar Saída].Columns[Cod_Disc]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Junção de Mesclagem.Inputs[Entrada Direita da Junção de Mesclagem].Columns[Cod_Curso]"
@@ -4055,7 +4084,8 @@ FROM            Alunos AS A INNER JOIN
                       refId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Disc]"
                       dataType="i8"
                       lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Disc]"
-                      name="Cod_Disc">
+                      name="Cod_Disc"
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -4264,7 +4294,7 @@ FROM            Alunos AS A INNER JOIN
                         <property
                           dataType="System.Int32"
                           description="Especifica a ordem de classificação da coluna."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4367,7 +4397,8 @@ FROM            Alunos AS A INNER JOIN
                       refId="Package\Carga Fatos\Ordenar anulos.Outputs[Classificar Saída].Columns[Cod_Disc]"
                       dataType="i8"
                       lineageId="Package\Carga Fatos\Ordenar anulos.Outputs[Classificar Saída].Columns[Cod_Disc]"
-                      name="Cod_Disc">
+                      name="Cod_Disc"
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -4477,10 +4508,10 @@ FROM            Alunos AS A INNER JOIN
                   name="Classificar Entrada">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Carga Fatos\Ordenar Impar.Inputs[Classificar Entrada].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Ordenar Impar.Inputs[Classificar Entrada].Columns[Semestre]"
                       cachedDataType="i4"
-                      cachedName="SEMESTRE"
-                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]">
+                      cachedName="Semestre"
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -4524,6 +4555,22 @@ FROM            Alunos AS A INNER JOIN
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga Fatos\Ordenar Impar.Inputs[Classificar Entrada].Columns[Cod_Disc]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Disc"
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Cod_Disc]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação para os dados de caractere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica a ordem de classificação da coluna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4535,16 +4582,16 @@ FROM            Alunos AS A INNER JOIN
                   name="Classificar Saída">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Semestre]"
                       dataType="i4"
-                      lineageId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[SEMESTRE]"
-                      name="SEMESTRE">
+                      lineageId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Semestre]"
+                      name="Semestre">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
-                          name="SortColumnId">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]}</property>
+                          name="SortColumnId">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4572,6 +4619,20 @@ FROM            Alunos AS A INNER JOIN
                           dataType="System.Int32"
                           description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
                           name="SortColumnId">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Mat_Alu]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Cod_Disc]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Cod_Disc]"
+                      name="Cod_Disc"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
+                          name="SortColumnId">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Cod_Disc]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4603,10 +4664,10 @@ FROM            Alunos AS A INNER JOIN
                   name="Classificar Entrada">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Carga Fatos\Ordenar Par.Inputs[Classificar Entrada].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Ordenar Par.Inputs[Classificar Entrada].Columns[Semestre]"
                       cachedDataType="i4"
-                      cachedName="SEMESTRE"
-                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]">
+                      cachedName="Semestre"
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -4650,6 +4711,22 @@ FROM            Alunos AS A INNER JOIN
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga Fatos\Ordenar Par.Inputs[Classificar Entrada].Columns[Cod_Disc]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Disc"
+                      lineageId="Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Cod_Disc]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação para os dados de caractere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica a ordem de classificação da coluna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4661,16 +4738,16 @@ FROM            Alunos AS A INNER JOIN
                   name="Classificar Saída">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[SEMESTRE]"
+                      refId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Semestre]"
                       dataType="i4"
-                      lineageId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[SEMESTRE]"
-                      name="SEMESTRE">
+                      lineageId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Semestre]"
+                      name="Semestre">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
-                          name="SortColumnId">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[SEMESTRE]}</property>
+                          name="SortColumnId">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Semestre]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4698,6 +4775,20 @@ FROM            Alunos AS A INNER JOIN
                           dataType="System.Int32"
                           description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
                           name="SortColumnId">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Mat_Alu]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Cod_Disc]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Cod_Disc]"
+                      name="Cod_Disc"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
+                          name="SortColumnId">#{Package\Carga Fatos\Datas.Outputs[Saída de Origem OLE DB].Columns[Cod_Disc]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4760,6 +4851,22 @@ FROM            Alunos AS A INNER JOIN
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada].Columns[Cod_Disc]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Disc"
+                      lineageId="Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Cod_Disc]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação para os dados de caractere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica a ordem de classificação da coluna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4795,6 +4902,20 @@ FROM            Alunos AS A INNER JOIN
                           dataType="System.Int32"
                           description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
                           name="SortColumnId">#{Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada].Columns[Cod_Tempo_Inserir]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Ordenar tempo.Outputs[Classificar Saída].Columns[Cod_Disc]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Ordenar tempo.Outputs[Classificar Saída].Columns[Cod_Disc]"
+                      name="Cod_Disc"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
+                          name="SortColumnId">#{Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Cod_Disc]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4913,13 +5034,13 @@ FROM            Alunos AS A INNER JOIN
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
-                      name="Expression">((DT_I2)#{Package\Carga Fatos\Unir Cotista.Outputs[Unir Tudo Saída 1].Columns[Status]}) == 1</property>
+                      name="Expression">#{Package\Carga Fatos\Unir Cotista.Outputs[Unir Tudo Saída 1].Columns[Status]} ==  FALSE </property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
                       expressionType="Notify"
-                      name="FriendlyExpression">((DT_I2)Status) == 1</property>
+                      name="FriendlyExpression">Status ==  FALSE </property>
                     <property
                       dataType="System.Int32"
                       description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
@@ -4941,13 +5062,13 @@ FROM            Alunos AS A INNER JOIN
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
-                      name="Expression">((DT_I2)#{Package\Carga Fatos\Unir Cotista.Outputs[Unir Tudo Saída 1].Columns[Status]}) == 0</property>
+                      name="Expression">#{Package\Carga Fatos\Unir Cotista.Outputs[Unir Tudo Saída 1].Columns[Status]} ==  TRUE </property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
                       expressionType="Notify"
-                      name="FriendlyExpression">((DT_I2)Status) == 0</property>
+                      name="FriendlyExpression">Status ==  TRUE </property>
                     <property
                       dataType="System.Int32"
                       description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
@@ -5030,13 +5151,13 @@ FROM            Alunos AS A INNER JOIN
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
-                      name="Expression">((DT_I2)#{Package\Carga Fatos\Alunos.Outputs[Saída de Origem OLE DB].Columns[Cotista]}) == 1</property>
+                      name="Expression">#{Package\Carga Fatos\Alunos.Outputs[Saída de Origem OLE DB].Columns[Cotista]} ==  FALSE </property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
                       expressionType="Notify"
-                      name="FriendlyExpression">((DT_I2)Cotista) == 1</property>
+                      name="FriendlyExpression">Cotista ==  FALSE </property>
                     <property
                       dataType="System.Int32"
                       description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
@@ -5058,13 +5179,13 @@ FROM            Alunos AS A INNER JOIN
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a expressão. Essa versão da expressão usa identificadores de linhagem, em vez de nomes de colunas."
-                      name="Expression">((DT_I2)#{Package\Carga Fatos\Alunos.Outputs[Saída de Origem OLE DB].Columns[Cotista]}) == 0</property>
+                      name="Expression">#{Package\Carga Fatos\Alunos.Outputs[Saída de Origem OLE DB].Columns[Cotista]} ==  TRUE </property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Especifica a versão amigável da expressão. Essa versão de expressão usa nomes de colunas."
                       expressionType="Notify"
-                      name="FriendlyExpression">((DT_I2)Cotista) == 0</property>
+                      name="FriendlyExpression">Cotista ==  TRUE </property>
                     <property
                       dataType="System.Int32"
                       description="Especifica a posição da condição na lista de condições que a transformação avalia. A ordem de avaliação é do menor para o maior valor."
@@ -5649,6 +5770,20 @@ FROM            Alunos AS A INNER JOIN
                           name="OutputColumnLineageID">#{Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Mat_Alu]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga Fatos\Unir Tudo.Inputs[Unir Tudo Entrada 1].Columns[Cod_Disc]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Disc"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Carga Fatos\Ordenar Par.Outputs[Classificar Saída].Columns[Cod_Disc]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Identificação de linhagem de coluna de saída"
+                          name="OutputColumnLineageID">#{Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Cod_Disc]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5709,6 +5844,20 @@ FROM            Alunos AS A INNER JOIN
                           name="OutputColumnLineageID">#{Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Mat_Alu]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga Fatos\Unir Tudo.Inputs[Entrada Unir Tudo 1].Columns[Cod_Disc]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Disc"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Carga Fatos\Ordenar Impar.Outputs[Classificar Saída].Columns[Cod_Disc]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Identificação de linhagem de coluna de saída"
+                          name="OutputColumnLineageID">#{Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Cod_Disc]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5745,6 +5894,11 @@ FROM            Alunos AS A INNER JOIN
                       dataType="i8"
                       lineageId="Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Mat_Alu]"
                       name="Mat_Alu" />
+                    <outputColumn
+                      refId="Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Cod_Disc]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1].Columns[Cod_Disc]"
+                      name="Cod_Disc" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -5808,40 +5962,40 @@ FROM            Alunos AS A INNER JOIN
               name="Saída da Junção de Mesclagem"
               startId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
-              endId="Package\Carga Fatos\Unir Status.Inputs[Unir Tudo Entrada 1]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
+              endId="Package\Carga Fatos\Unir Cotista.Inputs[Entrada Unir Tudo 1]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Reprovado.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
-              endId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
-              endId="Package\Carga Fatos\Unir Status.Inputs[Entrada Unir Tudo 1]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Aprovado.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Não Cotista.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
               endId="Package\Carga Fatos\Unir Tudo.Inputs[Unir Tudo Entrada 1]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga Fatos\Criar Cod_Tempo Par.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
-              endId="Package\Carga Fatos\Unir Cotista.Inputs[Entrada Unir Tudo 1]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
+              endId="Package\Carga Fatos\Unir Status.Inputs[Entrada Unir Tudo 1]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Não Cotista.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Aprovado.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
+              endId="Package\Carga Fatos\Unir Tudo.Inputs[Entrada Unir Tudo 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Criar Cod_Tempo Impar.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
+              endId="Package\Carga Fatos\Unir Status.Inputs[Unir Tudo Entrada 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Reprovado.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
               endId="Package\Carga Fatos\Unir Cotista.Inputs[Unir Tudo Entrada 1]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga Fatos\Cotista.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
-              endId="Package\Carga Fatos\Unir Tudo.Inputs[Entrada Unir Tudo 1]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
+              endId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Impar.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Conversão de Dados]"
               endId="Package\Carga Fatos\Criar Cod_Tempo Correto.Inputs[Entrada de Coluna Derivada]"
@@ -5868,11 +6022,6 @@ FROM            Alunos AS A INNER JOIN
               name="Saída de Origem OLE DB"
               startId="Package\Carga Fatos\Alunos.Outputs[Saída de Origem OLE DB]" />
             <path
-              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 12]"
-              endId="Package\Carga Fatos\Converter para String.Inputs[Entrada de Conversão de Dados]"
-              name="Unir Tudo Saída 1"
-              startId="Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1]" />
-            <path
               refId="Package\Carga Fatos.Paths[Unir Tudo Saída 1]"
               endId="Package\Carga Fatos\Se Aprovado.Inputs[Entrada de Divisão Condicional]"
               name="Unir Tudo Saída 1"
@@ -5882,6 +6031,11 @@ FROM            Alunos AS A INNER JOIN
               endId="Package\Carga Fatos\Converter dados alunos.Inputs[Entrada de Conversão de Dados]"
               name="Unir Tudo Saída 1"
               startId="Package\Carga Fatos\Unir Status.Outputs[Unir Tudo Saída 1]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 12]"
+              endId="Package\Carga Fatos\Converter para String.Inputs[Entrada de Conversão de Dados]"
+              name="Unir Tudo Saída 1"
+              startId="Package\Carga Fatos\Unir Tudo.Outputs[Unir Tudo Saída 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5890,6 +6044,7 @@ FROM            Alunos AS A INNER JOIN
       DTS:refId="Package\Limpar  banco dimensional"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{0BDDF0AC-84F3-4633-BC10-A0E11BE785DA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -6833,7 +6988,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6855,29 +7012,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Origem OLE DB1]"
-          TopLeft="395.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6921,7 +7058,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7267,42 +7406,6 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Nao_Cotista]"
-          TopLeft="375.166666666667,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.3333333333333,60"
-              Start="0,0"
-              End="20.3333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4376899696049" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4376899696049"
-                    Point2="0,24.4376899696049"
-                    Point3="4,24.4376899696049" />
-                  <mssgle:LineSegment
-                    End="16.3333333333333,24.4376899696049" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.3333333333333,24.4376899696049"
-                    Point2="20.3333333333333,24.4376899696049"
-                    Point3="20.3333333333333,28.4376899696049" />
-                  <mssgle:LineSegment
-                    End="20.3333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-16.6166927083333,29.4376899696049,53.56671875,10.8671875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Carga Fatos.Paths[Impar]"
           TopLeft="206.5,251.5">
           <EdgeLayout.Curve>
@@ -7339,42 +7442,6 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Cotista]"
-          TopLeft="415.833333333333,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="164.666666666667,60"
-              Start="0,0"
-              End="164.666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4376899696049" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4376899696049"
-                    Point2="0,24.4376899696049"
-                    Point3="4,24.4376899696049" />
-                  <mssgle:LineSegment
-                    End="160.666666666667,24.4376899696049" />
-                  <mssgle:CubicBezierSegment
-                    Point1="160.666666666667,24.4376899696049"
-                    Point2="164.666666666667,24.4376899696049"
-                    Point3="164.666666666667,28.4376899696049" />
-                  <mssgle:LineSegment
-                    End="164.666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="66.7474544270833,29.4376899696049,31.1717578125,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Carga Fatos.Paths[Classificar Saída3]"
           TopLeft="246.5,863.5">
           <EdgeLayout.Curve>
@@ -7405,7 +7472,9 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="84.4166666666665,40.697796432319,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7571,6 +7640,102 @@ FROM            Alunos AS A INNER JOIN
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="95.5,-22,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Nao_Cotista]"
+          TopLeft="375.166666666667,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.3333333333333,60"
+              Start="0,0"
+              End="20.3333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4376899696049" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4376899696049"
+                    Point2="0,24.4376899696049"
+                    Point3="4,24.4376899696049" />
+                  <mssgle:LineSegment
+                    End="16.3333333333333,24.4376899696049" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.3333333333333,24.4376899696049"
+                    Point2="20.3333333333333,24.4376899696049"
+                    Point3="20.3333333333333,28.4376899696049" />
+                  <mssgle:LineSegment
+                    End="20.3333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.6166927083333,29.4376899696049,53.56671875,10.8671875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Cotista]"
+          TopLeft="415.833333333333,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="164.666666666667,60"
+              Start="0,0"
+              End="164.666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4376899696049" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4376899696049"
+                    Point2="0,24.4376899696049"
+                    Point3="4,24.4376899696049" />
+                  <mssgle:LineSegment
+                    End="160.666666666667,24.4376899696049" />
+                  <mssgle:CubicBezierSegment
+                    Point1="160.666666666667,24.4376899696049"
+                    Point2="164.666666666667,24.4376899696049"
+                    Point3="164.666666666667,28.4376899696049" />
+                  <mssgle:LineSegment
+                    End="164.666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="66.7474544270833,29.4376899696049,31.1717578125,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Origem OLE DB1]"
+          TopLeft="395.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
