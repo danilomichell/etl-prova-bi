@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="68"
-  DTS:VersionGUID="{C7A2F495-4A9E-4927-9BF4-8AAF3069A732}">
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{8F5FFF73-B3C6-4B2A-8A21-24B7B02D02F6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADoSpybky56lnErIco1HOIWAAAAAASAAACgAAAAEAAAAKlwg3upOXQiyB8NMiSCLJQgAAAAPWKSLRPoD03UFfHGx+8FqVDkA9E7FVDjRYJWY2Xbi/4UAAAAIaNFpjYkN6rFSlBvstcnZ8pTNuY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC3vT5+9nRpoM0wdAV5apnZAAAAAASAAACgAAAAEAAAAMZ+1Zoql/Go6JN1F2pPHWcgAAAAkAmpYM2g+sX7rSNTN72P2EVx5WG33sgeVsfMgOAQl8MUAAAAhcSIcp6ytxYB6oysDdJs/dqtbtg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADgjXfcLgqaVxDT+N88CeLNAAAAAASAAACgAAAAEAAAAPeJ+W+8X1qUEUpFbBLzJsogAAAAjf2eSDjSsr1QLgfrK7IbXpqX+Dyu6gPv7CKNFyLpKfEUAAAAlTismTHq2HXPH5uqGIO5ibeG67U</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADzL+PbBhm5ZTxkMnNVjRqmAAAAAASAAACgAAAAEAAAAHjuCgEnsi96dOR1Bwt3ahIgAAAAdIh4VV/9qo9Z7g5Fm5bdaMH1teFIq/5rrrkPRUrbjGcUAAAAJBiLs/BAJEDZr8bNGFG11aZnM/s</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,6 @@
       DTS:refId="Package\Carga dimensão cursos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{6C3F981F-60D9-4962-A273-C7B4D2C8D7FE}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -380,7 +379,6 @@ JOIN DEPARTAMENTOS D ON D.COD_DPTO = C.COD_DPTO</property>
       DTS:refId="Package\Carga dimensão disciplinas"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{DAF08933-1630-40BA-923F-A7967DC586DC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -703,7 +701,6 @@ FROM DISCIPLINAS D</property>
       DTS:refId="Package\Carga dimensão tempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{DD96FE63-82FA-499C-8ACC-362D2F9EB72D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -6044,7 +6041,6 @@ FROM            Alunos AS A INNER JOIN
       DTS:refId="Package\Limpar  banco dimensional"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
       DTS:DTSID="{0BDDF0AC-84F3-4633-BC10-A0E11BE785DA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
