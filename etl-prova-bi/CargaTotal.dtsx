@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="75"
-  DTS:VersionGUID="{6B6CEEE1-DCF3-43B2-BAD1-8C927B7032D1}">
+  DTS:VersionBuild="76"
+  DTS:VersionGUID="{600BCD48-5DF0-4543-8259-196E1AFF3FB0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD+oSBRGFKygmUdN1hkXvTUAAAAAASAAACgAAAAEAAAABD3vt3f3rk6j8v+iUD9mScgAAAAoPNMTw4NELTgLtMnuq0Vch2NvHyHDMG8oHe4Et//y7gUAAAAK60JI1KINe3sECrx7czrucdNcYo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABPtRpKK0fpgxd9hFJAUZzFAAAAAASAAACgAAAAEAAAANnck2EYA+NpE/vXCiohEbUgAAAARsKhrSQs0JrmILGC+2l/AeD3XmVYGPyuoN7LAEwOZAUUAAAAf4/4dKUtuvjyLOWKMVieSh3mtUY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABMlkP0by9QPHz+2rNaddXaAAAAAASAAACgAAAAEAAAAIG5er4E8mxZPd4ca+Tgz5ogAAAAMYko2vH6ybVqSbYkEDdJ/QqoWeLLoIsFr6cKdqfuMCUUAAAA+j28FZYAPU0Jdx9nxwjmNpiEUxY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADXYYW8hKuIEeiIiXKEMEk4AAAAAASAAACgAAAAEAAAAHAQqDgRJXxkPjbIrQPOHiggAAAAztRHm3mXEvilicbrdg9nR7npd/XTN7eDe4XcbWHdfPAUAAAAFX5swyTQb5tuSeapSx6R4vI+ipM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,6 @@
       DTS:refId="Package\Carga dimensão cursos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{6C3F981F-60D9-4962-A273-C7B4D2C8D7FE}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -380,7 +379,6 @@ JOIN DEPARTAMENTOS D ON D.COD_DPTO = C.COD_DPTO</property>
       DTS:refId="Package\Carga dimensão disciplinas"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{DAF08933-1630-40BA-923F-A7967DC586DC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -703,7 +701,6 @@ FROM DISCIPLINAS D</property>
       DTS:refId="Package\Carga dimensão tempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{DD96FE63-82FA-499C-8ACC-362D2F9EB72D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -6283,40 +6280,40 @@ FROM            Alunos AS A INNER JOIN
               name="Saída de Agregação 1"
               startId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
-              endId="Package\Carga Fatos\Unir Status.Inputs[Unir Tudo Entrada 1]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
+              endId="Package\Carga Fatos\Unir Tudo.Inputs[Unir Tudo Entrada 1]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Reprovado.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
-              endId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
-              endId="Package\Carga Fatos\Unir Status.Inputs[Entrada Unir Tudo 1]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Aprovado.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Criar Cod_Tempo Par.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
-              endId="Package\Carga Fatos\Unir Cotista.Inputs[Entrada Unir Tudo 1]"
+              endId="Package\Carga Fatos\Unir Cotista.Inputs[Unir Tudo Entrada 1]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Não Cotista.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Cotista.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
               endId="Package\Carga Fatos\Unir Tudo.Inputs[Entrada Unir Tudo 1]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga Fatos\Criar Cod_Tempo Impar.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
-              endId="Package\Carga Fatos\Unir Cotista.Inputs[Unir Tudo Entrada 1]"
+              endId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Cotista.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
+              endId="Package\Carga Fatos\Unir Status.Inputs[Entrada Unir Tudo 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Aprovado.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
+              endId="Package\Carga Fatos\Unir Status.Inputs[Unir Tudo Entrada 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Reprovado.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
-              endId="Package\Carga Fatos\Unir Tudo.Inputs[Unir Tudo Entrada 1]"
+              endId="Package\Carga Fatos\Unir Cotista.Inputs[Entrada Unir Tudo 1]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Par.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Não Cotista.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Conversão de Dados]"
               endId="Package\Carga Fatos\Criar Cod_Tempo Correto.Inputs[Entrada de Coluna Derivada]"
@@ -6343,15 +6340,15 @@ FROM            Alunos AS A INNER JOIN
               name="Saída de Origem OLE DB"
               startId="Package\Carga Fatos\Alunos.Outputs[Saída de Origem OLE DB]" />
             <path
-              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 1]"
-              endId="Package\Carga Fatos\Converter dados alunos.Inputs[Entrada de Conversão de Dados]"
-              name="Unir Tudo Saída 1"
-              startId="Package\Carga Fatos\Unir Status.Outputs[Unir Tudo Saída 1]" />
-            <path
               refId="Package\Carga Fatos.Paths[Unir Tudo Saída 11]"
               endId="Package\Carga Fatos\Se Aprovado.Inputs[Entrada de Divisão Condicional]"
               name="Unir Tudo Saída 1"
               startId="Package\Carga Fatos\Unir Cotista.Outputs[Unir Tudo Saída 1]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 1]"
+              endId="Package\Carga Fatos\Converter dados alunos.Inputs[Entrada de Conversão de Dados]"
+              name="Unir Tudo Saída 1"
+              startId="Package\Carga Fatos\Unir Status.Outputs[Unir Tudo Saída 1]" />
             <path
               refId="Package\Carga Fatos.Paths[Unir Tudo Saída 12]"
               endId="Package\Carga Fatos\Converter para String.Inputs[Entrada de Conversão de Dados]"
@@ -6365,7 +6362,6 @@ FROM            Alunos AS A INNER JOIN
       DTS:refId="Package\Limpar  banco dimensional"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
       DTS:DTSID="{0BDDF0AC-84F3-4633-BC10-A0E11BE785DA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -7475,7 +7471,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
           TopLeft="350.5,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7509,7 +7505,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
           TopLeft="395.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7543,7 +7539,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
           TopLeft="580.5,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7577,7 +7573,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
           TopLeft="98.5000000000001,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7611,7 +7607,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
           TopLeft="390.5,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7645,7 +7641,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
           TopLeft="580.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7679,7 +7675,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
           TopLeft="199.5,761.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8122,7 +8118,7 @@ FROM            Alunos AS A INNER JOIN
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga Fatos\Datas">
+    design-time-name="Package\Carga Fatos\Alunos">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8130,7 +8126,7 @@ FROM            Alunos AS A INNER JOIN
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga Fatos\Alunos">
+    design-time-name="Package\Carga Fatos\Datas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
