@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="70"
-  DTS:VersionGUID="{11B798DB-DDB6-404E-A64C-87EFAB5E3501}">
+  DTS:VersionBuild="75"
+  DTS:VersionGUID="{6B6CEEE1-DCF3-43B2-BAD1-8C927B7032D1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACytuMnHxnCSkJU1XbNkJt6AAAAAASAAACgAAAAEAAAAKtfjzRBpDr54Yd9P2ByYSkgAAAAkk3r2hKIDF3koIJYaUbuwnqmd3bc6JR4zpwGynKKxtsUAAAA6RtQROXgpM+vcBxu9vfZnk/OTEE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD+oSBRGFKygmUdN1hkXvTUAAAAAASAAACgAAAAEAAAABD3vt3f3rk6j8v+iUD9mScgAAAAoPNMTw4NELTgLtMnuq0Vch2NvHyHDMG8oHe4Et//y7gUAAAAK60JI1KINe3sECrx7czrucdNcYo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA8UVPZchf65k/yueIJoOmaAAAAAASAAACgAAAAEAAAADAHUNimDXn0SGSagECn2gQgAAAAtEx8amsF241VkAmZzGnnIeIyqyyzX/uhZTMoqcJGg8cUAAAAx6if2XGZQdRIS/McjycnRYYRsLQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlQLG7wuw1ka8Mm6f8nzEEgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABMlkP0by9QPHz+2rNaddXaAAAAAASAAACgAAAAEAAAAIG5er4E8mxZPd4ca+Tgz5ogAAAAMYko2vH6ybVqSbYkEDdJ/QqoWeLLoIsFr6cKdqfuMCUUAAAA+j28FZYAPU0Jdx9nxwjmNpiEUxY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,6 +57,7 @@
       DTS:refId="Package\Carga dimensão cursos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{6C3F981F-60D9-4962-A273-C7B4D2C8D7FE}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -379,6 +380,7 @@ JOIN DEPARTAMENTOS D ON D.COD_DPTO = C.COD_DPTO</property>
       DTS:refId="Package\Carga dimensão disciplinas"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{DAF08933-1630-40BA-923F-A7967DC586DC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -701,6 +703,7 @@ FROM DISCIPLINAS D</property>
       DTS:refId="Package\Carga dimensão tempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{DD96FE63-82FA-499C-8ACC-362D2F9EB72D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -2494,6 +2497,324 @@ ON M.MAT_ALU = A.MAT_ALU</property>
           version="1">
           <components>
             <component
+              refId="Package\Carga Fatos\Agregação"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregação;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;3"
+              description="Dados de agregações com funções como Average, Sum, Count, Max e Min. Por exemplo, agrupe dados para computar a soma das vendas por produto ou a média de visitas por dia."
+              name="Agregação"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o número aproximado de chaves de agrupar por produzidas pela agregação. Um número Baixo indica valores de 500.000 chaves. Médio indica 5 valores de 5 milhões de chaves e Alto indica mais de 25 milhões de valores de chaves. Não especificado indica que nenhum valor de KeyScale foi usado."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica o número exato de chaves de agrupar por produzidas pela agregação. Se um valor de KeyScale for especificado, o valor em Keys terá precedência."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o número aproximado de valores distintos em uma coluna que a agregação conta de modo distinto. Baixo indica 500.000 valores de chave, Médio indica 5 milhões de valores de chave e Alto indica mais de 25 milhões de valores de chave. Não especificado indica que nenhum valor de CountDistinctScale foi usado."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica o número exato de valores distintos de uma coluna que a agregação conta de modo distinto. Se um valor de CountDistinctScale for especificado, o valor em CountDistinctKeys terá precedência."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a porcentagem pela qual a memória pode ser estendida durante a agregação. Os valores válidos ficam entre 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1]"
+                  name="Entrada de Agregação 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1].Columns[Cod_Disc]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Disc"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Disc]" />
+                    <inputColumn
+                      refId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1].Columns[Cod_Curso]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Curso"
+                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Curso]" />
+                    <inputColumn
+                      refId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1].Columns[Cod_Tempo]"
+                      cachedDataType="i8"
+                      cachedName="Cod_Tempo"
+                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Tempo]" />
+                    <inputColumn
+                      refId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1].Columns[Mat_Alu]"
+                      cachedDataType="i8"
+                      cachedName="Mat_Alu"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Mat_Alu]" />
+                    <inputColumn
+                      refId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1].Columns[Nome]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Nome"
+                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Nome]" />
+                    <inputColumn
+                      refId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1].Columns[Cotista]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Cotista"
+                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cotista]" />
+                    <inputColumn
+                      refId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1].Columns[Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="Status"
+                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Status]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1]"
+                  name="Saída de Agregação 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica o número aproximado de chaves de agrupar por produzidas pela agregação. Um número Baixo indica valores de 500.000 chaves. Médio indica 5 valores de 5 milhões de chaves e Alto indica mais de 25 milhões de valores de chaves. Não especificado indica que nenhum valor de KeyScale foi usado."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica o número exato de chaves de agrupar por produzidas pela agregação. Se um valor de KeyScale for especificado, o valor em Keys terá precedência."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Contar tudo]"
+                      dataType="ui8"
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Contar tudo]"
+                      name="Contar tudo">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a identificação da coluna de entrada usada na agregação."
+                          name="AggregationColumnId">#{Package\Carga Fatos\0:invalid}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica o tipo de agregação."
+                          name="AggregationType"
+                          typeConverter="AggregationType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se a coluna requer tratamento especial porque pode conter dados superdimensionados ou exigir precisão superior a de um tipo de dados flutuante."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação da cadeia de caracteres."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Disc]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Disc]"
+                      name="Cod_Disc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a identificação da coluna de entrada usada na agregação."
+                          name="AggregationColumnId">#{Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Disc]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica o tipo de agregação."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se a coluna requer tratamento especial porque pode conter dados superdimensionados ou exigir precisão superior a de um tipo de dados flutuante."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação da cadeia de caracteres."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Curso]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Curso]"
+                      name="Cod_Curso">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a identificação da coluna de entrada usada na agregação."
+                          name="AggregationColumnId">#{Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Curso]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica o tipo de agregação."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se a coluna requer tratamento especial porque pode conter dados superdimensionados ou exigir precisão superior a de um tipo de dados flutuante."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação da cadeia de caracteres."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Tempo]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Tempo]"
+                      name="Cod_Tempo">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a identificação da coluna de entrada usada na agregação."
+                          name="AggregationColumnId">#{Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Tempo]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica o tipo de agregação."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se a coluna requer tratamento especial porque pode conter dados superdimensionados ou exigir precisão superior a de um tipo de dados flutuante."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação da cadeia de caracteres."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Mat_Alu]"
+                      dataType="i8"
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Mat_Alu]"
+                      name="Mat_Alu">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a identificação da coluna de entrada usada na agregação."
+                          name="AggregationColumnId">#{Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Mat_Alu]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica o tipo de agregação."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se a coluna requer tratamento especial porque pode conter dados superdimensionados ou exigir precisão superior a de um tipo de dados flutuante."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação da cadeia de caracteres."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Nome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Nome]"
+                      name="Nome">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a identificação da coluna de entrada usada na agregação."
+                          name="AggregationColumnId">#{Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Nome]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica o tipo de agregação."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se a coluna requer tratamento especial porque pode conter dados superdimensionados ou exigir precisão superior a de um tipo de dados flutuante."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação da cadeia de caracteres."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cotista]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cotista]"
+                      name="Cotista">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a identificação da coluna de entrada usada na agregação."
+                          name="AggregationColumnId">#{Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cotista]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica o tipo de agregação."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se a coluna requer tratamento especial porque pode conter dados superdimensionados ou exigir precisão superior a de um tipo de dados flutuante."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação da cadeia de caracteres."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Status]"
+                      name="Status">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica a identificação da coluna de entrada usada na agregação."
+                          name="AggregationColumnId">#{Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Status]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica o tipo de agregação."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se a coluna requer tratamento especial porque pode conter dados superdimensionados ou exigir precisão superior a de um tipo de dados flutuante."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação da cadeia de caracteres."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Carga Fatos\Alunos"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
@@ -3744,28 +4065,26 @@ FROM            Alunos AS A INNER JOIN
                       refId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Cod_Disc]"
                       cachedDataType="i8"
                       cachedName="Cod_Disc"
-                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Cod_Disc]"
-                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Disc]" />
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Disc]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Cod_Curso]"
                       cachedDataType="i8"
                       cachedName="Cod_Curso"
                       externalMetadataColumnId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Cod_Curso]"
-                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Curso]" />
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Curso]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Cod_Tempo]"
                       cachedDataType="i8"
                       cachedName="Cod_Tempo"
                       externalMetadataColumnId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Cod_Tempo]"
-                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cod_Tempo]" />
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cod_Tempo]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Mat_Alu]"
                       cachedDataType="i8"
                       cachedName="Mat_Alu"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Mat_Alu]"
-                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Mat_Alu]" />
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Mat_Alu]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Cotista]"
                       cachedCodepage="1252"
@@ -3773,7 +4092,7 @@ FROM            Alunos AS A INNER JOIN
                       cachedLength="3"
                       cachedName="Cotista"
                       externalMetadataColumnId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Cotista]"
-                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Cotista]" />
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Cotista]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Status]"
                       cachedCodepage="1252"
@@ -3781,7 +4100,7 @@ FROM            Alunos AS A INNER JOIN
                       cachedLength="9"
                       cachedName="Status"
                       externalMetadataColumnId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Status]"
-                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Status]" />
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Status]" />
                     <inputColumn
                       refId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Nome]"
                       cachedCodepage="1252"
@@ -3789,7 +4108,7 @@ FROM            Alunos AS A INNER JOIN
                       cachedLength="100"
                       cachedName="Nome"
                       externalMetadataColumnId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nom_Alu]"
-                      lineageId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem].Columns[Nome]" />
+                      lineageId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1].Columns[Nome]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5955,44 +6274,49 @@ FROM            Alunos AS A INNER JOIN
               startId="Package\Carga Fatos\Se Aprovado.Outputs[Reprovado]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída da Junção de Mesclagem]"
-              endId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+              endId="Package\Carga Fatos\Agregação.Inputs[Entrada de Agregação 1]"
               name="Saída da Junção de Mesclagem"
               startId="Package\Carga Fatos\Junção de Mesclagem.Outputs[Saída da Junção de Mesclagem]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
-              endId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada]" />
+              refId="Package\Carga Fatos.Paths[Saída de Agregação 1]"
+              endId="Package\Carga Fatos\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+              name="Saída de Agregação 1"
+              startId="Package\Carga Fatos\Agregação.Outputs[Saída de Agregação 1]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
-              endId="Package\Carga Fatos\Unir Cotista.Inputs[Unir Tudo Entrada 1]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Cotista.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
               endId="Package\Carga Fatos\Unir Status.Inputs[Unir Tudo Entrada 1]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga Fatos\Reprovado.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
-              endId="Package\Carga Fatos\Unir Tudo.Inputs[Unir Tudo Entrada 1]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
+              endId="Package\Carga Fatos\Ordenar tempo.Inputs[Classificar Entrada]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga Fatos\Criar Cod_Tempo Par.Outputs[Saída de Coluna Derivada]" />
+              startId="Package\Carga Fatos\Criar Cod_Tempo Correto.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
               endId="Package\Carga Fatos\Unir Status.Inputs[Entrada Unir Tudo 1]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga Fatos\Aprovado.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
               endId="Package\Carga Fatos\Unir Cotista.Inputs[Entrada Unir Tudo 1]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga Fatos\Não Cotista.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
               endId="Package\Carga Fatos\Unir Tudo.Inputs[Entrada Unir Tudo 1]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga Fatos\Criar Cod_Tempo Impar.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
+              endId="Package\Carga Fatos\Unir Cotista.Inputs[Unir Tudo Entrada 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Cotista.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
+              endId="Package\Carga Fatos\Unir Tudo.Inputs[Unir Tudo Entrada 1]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga Fatos\Criar Cod_Tempo Par.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga Fatos.Paths[Saída de Conversão de Dados]"
               endId="Package\Carga Fatos\Criar Cod_Tempo Correto.Inputs[Entrada de Coluna Derivada]"
@@ -6019,12 +6343,12 @@ FROM            Alunos AS A INNER JOIN
               name="Saída de Origem OLE DB"
               startId="Package\Carga Fatos\Alunos.Outputs[Saída de Origem OLE DB]" />
             <path
-              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 11]"
+              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 1]"
               endId="Package\Carga Fatos\Converter dados alunos.Inputs[Entrada de Conversão de Dados]"
               name="Unir Tudo Saída 1"
               startId="Package\Carga Fatos\Unir Status.Outputs[Unir Tudo Saída 1]" />
             <path
-              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 1]"
+              refId="Package\Carga Fatos.Paths[Unir Tudo Saída 11]"
               endId="Package\Carga Fatos\Se Aprovado.Inputs[Entrada de Divisão Condicional]"
               name="Unir Tudo Saída 1"
               startId="Package\Carga Fatos\Unir Cotista.Outputs[Unir Tudo Saída 1]" />
@@ -6041,6 +6365,7 @@ FROM            Alunos AS A INNER JOIN
       DTS:refId="Package\Limpar  banco dimensional"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{0BDDF0AC-84F3-4633-BC10-A0E11BE785DA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -6216,7 +6541,7 @@ FROM            Alunos AS A INNER JOIN
     design-time-name="Package\Carga dimensão cursos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="158,42"
           Id="Package\Carga dimensão cursos\Origem OLE DB"
@@ -6244,9 +6569,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6415,7 +6738,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-8,18.25,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6450,9 +6773,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6486,9 +6807,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6678,9 +6997,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6714,9 +7031,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6738,9 +7053,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6762,9 +7075,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6786,9 +7097,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6810,9 +7119,7 @@ FROM            Alunos AS A INNER JOIN
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6948,10 +7255,6 @@ FROM            Alunos AS A INNER JOIN
           Id="Package\Carga Fatos\Junção de Mesclagem"
           TopLeft="367,923.5" />
         <NodeLayout
-          Size="159,42"
-          Id="Package\Carga Fatos\Destino OLE DB"
-          TopLeft="763,959" />
-        <NodeLayout
           Size="196,42"
           Id="Package\Carga Fatos\Converter dados alunos"
           TopLeft="363.5,719.5" />
@@ -6966,11 +7269,11 @@ FROM            Alunos AS A INNER JOIN
         <NodeLayout
           Size="176,42"
           Id="Package\Carga Fatos\Divisão Condicional"
-          TopLeft="90.5,209.5" />
+          TopLeft="90.5000000000001,209.5" />
         <NodeLayout
           Size="186,42"
           Id="Package\Carga Fatos\Criar Cod_Tempo Par"
-          TopLeft="5.50000000000011,413.5" />
+          TopLeft="5.50000000000006,413.5" />
         <NodeLayout
           Size="136,42"
           Id="Package\Carga Fatos\Unir Cotista"
@@ -6978,7 +7281,7 @@ FROM            Alunos AS A INNER JOIN
         <NodeLayout
           Size="182,42"
           Id="Package\Carga Fatos\Conversão de Dados"
-          TopLeft="87.5,107.5" />
+          TopLeft="87.5000000000001,107.5" />
         <NodeLayout
           Size="127,42"
           Id="Package\Carga Fatos\Unir Tudo"
@@ -7019,7 +7322,7 @@ FROM            Alunos AS A INNER JOIN
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Fatos.Paths[Unir Tudo Saída 11]"
-          TopLeft="461.5,659.5">
+          TopLeft="580.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7041,7 +7344,7 @@ FROM            Alunos AS A INNER JOIN
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Fatos.Paths[Unir Tudo Saída 1]"
-          TopLeft="580.5,353.5">
+          TopLeft="461.5,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -7155,14 +7458,14 @@ FROM            Alunos AS A INNER JOIN
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7173,108 +7476,6 @@ FROM            Alunos AS A INNER JOIN
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada6]"
-          TopLeft="199.5,761.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="47,59.9999999999999"
-              Start="0,0"
-              End="47,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.9999999999999"
-                    Point2="0,29.9999999999999"
-                    Point3="4,29.9999999999999" />
-                  <mssgle:LineSegment
-                    End="43,29.9999999999999" />
-                  <mssgle:CubicBezierSegment
-                    Point1="43,29.9999999999999"
-                    Point2="47,29.9999999999999"
-                    Point3="47,33.9999999999999" />
-                  <mssgle:LineSegment
-                    End="47,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
-          TopLeft="580.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="21.3333333333334,60"
-              Start="0,0"
-              End="21.3333333333334,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5813953488372" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5813953488372"
-                    Point2="0,35.5813953488372"
-                    Point3="4,35.5813953488372" />
-                  <mssgle:LineSegment
-                    End="17.3333333333334,35.5813953488372" />
-                  <mssgle:CubicBezierSegment
-                    Point1="17.3333333333334,35.5813953488372"
-                    Point2="21.3333333333334,35.5813953488372"
-                    Point3="21.3333333333334,39.5813953488372" />
-                  <mssgle:LineSegment
-                    End="21.3333333333334,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
-          TopLeft="390.5,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50.1666666666667,60"
-              Start="0,0"
-              End="50.1666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5720653789004"
-                    Point2="0,35.5720653789004"
-                    Point3="4,35.5720653789004" />
-                  <mssgle:LineSegment
-                    End="46.1666666666667,35.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.1666666666667,35.5720653789004"
-                    Point2="50.1666666666667,35.5720653789004"
-                    Point3="50.1666666666667,39.5720653789004" />
-                  <mssgle:LineSegment
-                    End="50.1666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
           TopLeft="350.5,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7308,75 +7509,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
-          TopLeft="580.5,557.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-98.1666666666667,60"
-              Start="0,0"
-              End="-98.1666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5720653789004"
-                    Point2="0,35.5720653789004"
-                    Point3="-4,35.5720653789004" />
-                  <mssgle:LineSegment
-                    End="-94.1666666666667,35.5720653789004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-94.1666666666667,35.5720653789004"
-                    Point2="-98.1666666666667,35.5720653789004"
-                    Point3="-98.1666666666667,39.5720653789004" />
-                  <mssgle:LineSegment
-                    End="-98.1666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
-          TopLeft="98.5000000000001,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="81.1666666666667,60"
-              Start="0,0"
-              End="81.1666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.552099533437" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.552099533437"
-                    Point2="0,35.552099533437"
-                    Point3="4,35.552099533437" />
-                  <mssgle:LineSegment
-                    End="77.1666666666667,35.552099533437" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77.1666666666667,35.552099533437"
-                    Point2="81.1666666666667,35.552099533437"
-                    Point3="81.1666666666667,39.552099533437" />
-                  <mssgle:LineSegment
-                    End="81.1666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada5]"
           TopLeft="395.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7410,31 +7543,167 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga Fatos.Paths[Saída da Junção de Mesclagem]"
-          TopLeft="556,944.5">
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada4]"
+          TopLeft="580.5,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="207,35.5"
+              EndConnector="-98.1666666666667,60"
               Start="0,0"
-              End="199.5,35.5">
+              End="-98.1666666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="99.5,0" />
+                    End="0,31.5720653789004" />
                   <mssgle:CubicBezierSegment
-                    Point1="99.5,0"
-                    Point2="103.5,0"
-                    Point3="103.5,4" />
+                    Point1="0,31.5720653789004"
+                    Point2="0,35.5720653789004"
+                    Point3="-4,35.5720653789004" />
                   <mssgle:LineSegment
-                    End="103.5,31.5" />
+                    End="-94.1666666666667,35.5720653789004" />
                   <mssgle:CubicBezierSegment
-                    Point1="103.5,31.5"
-                    Point2="103.5,35.5"
-                    Point3="107.5,35.5" />
+                    Point1="-94.1666666666667,35.5720653789004"
+                    Point2="-98.1666666666667,35.5720653789004"
+                    Point3="-98.1666666666667,39.5720653789004" />
                   <mssgle:LineSegment
-                    End="199.5,35.5" />
+                    End="-98.1666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada3]"
+          TopLeft="98.5000000000001,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.1666666666667,60"
+              Start="0,0"
+              End="81.1666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.552099533437" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.552099533437"
+                    Point2="0,35.552099533437"
+                    Point3="4,35.552099533437" />
+                  <mssgle:LineSegment
+                    End="77.1666666666667,35.552099533437" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77.1666666666667,35.552099533437"
+                    Point2="81.1666666666667,35.552099533437"
+                    Point3="81.1666666666667,39.552099533437" />
+                  <mssgle:LineSegment
+                    End="81.1666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada2]"
+          TopLeft="390.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.1666666666667,60"
+              Start="0,0"
+              End="50.1666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5720653789004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5720653789004"
+                    Point2="0,35.5720653789004"
+                    Point3="4,35.5720653789004" />
+                  <mssgle:LineSegment
+                    End="46.1666666666667,35.5720653789004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.1666666666667,35.5720653789004"
+                    Point2="50.1666666666667,35.5720653789004"
+                    Point3="50.1666666666667,39.5720653789004" />
+                  <mssgle:LineSegment
+                    End="50.1666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada1]"
+          TopLeft="580.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.3333333333335,60"
+              Start="0,0"
+              End="21.3333333333335,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5813953488372" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5813953488372"
+                    Point2="0,35.5813953488372"
+                    Point3="4,35.5813953488372" />
+                  <mssgle:LineSegment
+                    End="17.3333333333335,35.5813953488372" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.3333333333335,35.5813953488372"
+                    Point2="21.3333333333335,35.5813953488372"
+                    Point3="21.3333333333335,39.5813953488372" />
+                  <mssgle:LineSegment
+                    End="21.3333333333335,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Coluna Derivada]"
+          TopLeft="199.5,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47,60"
+              Start="0,0"
+              End="47,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="43,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43,30"
+                    Point2="47,30"
+                    Point3="47,34" />
+                  <mssgle:LineSegment
+                    End="47,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7509,9 +7778,9 @@ FROM            Alunos AS A INNER JOIN
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.3333333333333,60"
+              EndConnector="20.3333333333334,60"
               Start="0,0"
-              End="20.3333333333333,52.5">
+              End="20.3333333333334,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -7522,20 +7791,20 @@ FROM            Alunos AS A INNER JOIN
                     Point2="0,24.4376899696049"
                     Point3="4,24.4376899696049" />
                   <mssgle:LineSegment
-                    End="16.3333333333333,24.4376899696049" />
+                    End="16.3333333333334,24.4376899696049" />
                   <mssgle:CubicBezierSegment
-                    Point1="16.3333333333333,24.4376899696049"
-                    Point2="20.3333333333333,24.4376899696049"
-                    Point3="20.3333333333333,28.4376899696049" />
+                    Point1="16.3333333333334,24.4376899696049"
+                    Point2="20.3333333333334,24.4376899696049"
+                    Point3="20.3333333333334,28.4376899696049" />
                   <mssgle:LineSegment
-                    End="20.3333333333333,52.5" />
+                    End="20.3333333333334,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-16.6166927083334,29.4376899696049,53.56671875,10.8671875"
+              BoundingBox="-16.6166927083333,29.4376899696049,53.56671875,10.8671875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7607,7 +7876,7 @@ FROM            Alunos AS A INNER JOIN
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="66.7474544270835,29.4376899696049,31.1717578125,9.5537109375"
+              BoundingBox="66.7474544270833,29.4376899696049,31.1717578125,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7771,11 +8040,97 @@ FROM            Alunos AS A INNER JOIN
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Carga Fatos\Destino OLE DB"
+          TopLeft="919,943" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Carga Fatos\Agregação"
+          TopLeft="651,882" />
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída da Junção de Mesclagem]"
+          TopLeft="556,944.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="94.9999999999999,-41.5"
+              Start="0,0"
+              End="87.4999999999999,-41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.4999999999999,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.4999999999999,0"
+                    Point2="47.4999999999999,0"
+                    Point3="47.4999999999999,-4" />
+                  <mssgle:LineSegment
+                    End="47.4999999999999,-37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.4999999999999,-37.5"
+                    Point2="47.4999999999999,-41.5"
+                    Point3="51.4999999999999,-41.5" />
+                  <mssgle:LineSegment
+                    End="87.4999999999999,-41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fatos.Paths[Saída de Agregação 1]"
+          TopLeft="783,903">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136,61"
+              Start="0,0"
+              End="128.5,61">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64,0"
+                    Point2="68,0"
+                    Point3="68,4" />
+                  <mssgle:LineSegment
+                    End="68,57" />
+                  <mssgle:CubicBezierSegment
+                    Point1="68,57"
+                    Point2="68,61"
+                    Point3="72,61" />
+                  <mssgle:LineSegment
+                    End="128.5,61" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="60,-22,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Carga Fatos\Datas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fatos\Alunos">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7792,14 +8147,6 @@ FROM            Alunos AS A INNER JOIN
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga Fatos\Alunos">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
